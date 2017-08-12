@@ -4,5 +4,3 @@ connect:
             class: "Wr\\Connect\\CoreBundle\\Contao\\BackendModule\\ConnectModule\\TodoModule"
         time:
             class: "Wr\\Connect\\CoreBundle\\Contao\\BackendModule\\ConnectModule\\TimeModule"
-        abo:
-            class: "Wr\\Connect\\CoreBundle\\Contao\\BackendModule\\ConnectModule\\AboModule"
