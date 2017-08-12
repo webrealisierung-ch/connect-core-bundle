@@ -1,0 +1,40 @@
+{
+    "name": "wr/connect-core-bundle",
+    "type": "contao-bundle",
+    "description": "Contao Bundle for managing projects, time and todos",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Daniel Steuri",
+            "homepage": "https://github.com/webrealisierung-ch"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "symfony/framework-bundle": "^3.3",
+        "contao/core-bundle": "^4.4",
+        "doctrine/orm": "^2.5"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0",
+        "doctrine/annotations": "1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wr\\Connect\\CoreBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Wr\\Connect\\CoreBundle\\ContaoManager\\Plugin"
+    }
+}

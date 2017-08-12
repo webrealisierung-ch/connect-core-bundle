@@ -1,0 +1,9 @@
+
+<?php if ($this->before): ?>
+    <?php echo $this->before; ?>
+<?php endif; ?>
+<div class="<?= $this->class ?>">
+    <?php foreach($this->connectModules as $connectModule):?>
+        <?= $connectModule; ?>
+    <?php endforeach; ?>
+</div>

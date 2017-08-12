@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="system/modules/wr_connect/languages/en/modules.php" source-language="en">
+        <body>
+            <trans-unit id="MOD.wr_connect">
+                <source>Connect</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_cockpit.0">
+                <source>Dashboard</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_cockpit.1">
+                <source>Overview over project, clients and todos</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_projects.0">
+                <source>Projects</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_projects.0">
+                <source>Projects</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_projects.1">
+                <source>Manage project and todos</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_abonnement.0">
+                <source>Abonnements</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_wr_abonnements.1">
+                <source>Manage abonnement</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_invoicing.0">
+                <source>Invoicing</source>
+            </trans-unit>
+            <trans-unit id="MOD.wr_invoicing.1">
+                <source>Create and modify invoice.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

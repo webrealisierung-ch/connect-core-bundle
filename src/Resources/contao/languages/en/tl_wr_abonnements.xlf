@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="system/modules/wr_connect/languages/en/tl_wr_project.php" source-language="en">
+        <body>
+            <trans-unit id="tl_wr_project.project_title_legend">
+                <source>Project</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.title.0">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.author.0">
+                <source>Project Manager</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.alias.0">
+                <source>Alias</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.owner.0">
+                <source>Client</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.worker.0">
+                <source>Worker</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.project_teaser_legend">
+                <source>Project Description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.teaser.0">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.project_files_legend">
+                <source>Project Files</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.projectDir.0">
+                <source>Directory</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.new.0">
+                <source>New project</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.edit.1">
+                <source>Edit project</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.todo.1">
+                <source>Edit todos</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.time.1">
+                <source>Edit time</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.delete.1">
+                <source>Delete project</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

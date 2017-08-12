@@ -1,0 +1,19 @@
+<div class="<?= $this->class ?>">
+    <?= $this->title; ?>
+    <?php foreach($this->Todos as $todo): ?>
+        <div class="todo_row" style="border-left: 5px solid #<?= $this->color ?> ;">
+            <div class="column_left">
+                <?php if($todo->getPriority() === 2): ?>
+                    <img src="/bundles/connectcore/alert-triangle.svg">
+                <?php elseif($todo->getPriority() === 1): ?>
+                    <img src="/bundles/connectcore/alert-circle.svg">
+                <?php endif; ?>
+            </div>
+            <div>
+                <h3><?= $todo->getTitle(); ?></h3>
+                <?= $todo->getDescription(); ?>
+            </div>
+            <!--<span class="move"><img src="/bundles/connectcore/move.svg"></span>-->
+        </div>
+    <?php endforeach; ?>
+</div>
