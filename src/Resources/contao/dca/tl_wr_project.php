@@ -77,11 +77,6 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'label'                   => array('ID'),
             'search'                  => true,
         ),
-        'pid' => array
-        (
-            'foreignKey'              => 'tl_wr_project.title',
-            'relation'                => array('type'=>'belongsTo', 'load'=>'eager')
-        ),
         'title' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['title'],
