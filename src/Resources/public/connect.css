@@ -52,8 +52,16 @@
 	box-sizing: border-box;
 	padding: 0 5px 0 0;
 }
-.todo_row h1, .todo_row div{
+.todo_row  .column_right{
 	width: 90%;
+}
+.todo_row .description{
+	height: 1.1em;
+	overflow: hidden;
+}
+.todo_row .toolbar{
+	padding: .5rem 0;
+	text-align: right;
 }
 .todos .column_left img{
 	max-width: 100%;
