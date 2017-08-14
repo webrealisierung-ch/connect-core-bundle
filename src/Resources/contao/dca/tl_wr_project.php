@@ -21,6 +21,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
         (
             'mode'                    => 2,
             'fields'                  => array('title', 'author'),
+            'panelLayout'             => 'sort,filter;search,limit'
         ),
         'label' => array
         (
@@ -61,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
     'palettes' => array
     (
         '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,author,alias,owner,workers;{description_legend},description;{files_legend},projectDir;{project_protected_legend},protected;{active_legend},published'
+        'default'                     => '{title_legend},title,author,alias,owner,workers;{description_legend},description;{files_legend},projectDir;{active_legend},active,start,stop'
     ),
     // Subpalettes
     'subpalettes' => array
