@@ -8,7 +8,7 @@ This bundle is currently under development. You can use it on your own risk! A s
 
 ## Installation
 
-#### contao/standard-edition
+### contao/standard-edition
 
 Run in your project folder the following composer command to add the Connect Bundle to your project.
 
@@ -41,7 +41,7 @@ Clear the chache and warmup the cache with the follwing two commands.
 
 Go to the install tool and update the database and then login in the to backend.
 
-#### contao-managed-edition
+### contao-managed-edition
 
 **Without the awesome Contao Manger**
 
