@@ -46,14 +46,13 @@
 	margin: 0 0 10px 0;
 }
 .todo_row .column_left{
-	width: 10%;
 	height: 100%;
 	margin: 0;
 	box-sizing: border-box;
 	padding: 0 5px 0 0;
 }
 .todo_row  .column_right{
-	width: 90%;
+	flex: 1;
 }
 .todo_row .description{
 	height: 1.1em;
