@@ -46,7 +46,7 @@
 	margin: 0 0 10px 0;
 }
 .todo_row .column_left{
-	width: 7%;
+	width: 10%;
 	height: 100%;
 	margin: 0;
 	box-sizing: border-box;
@@ -59,7 +59,13 @@
 	height: 1.1em;
 	overflow: hidden;
 }
+.todo_row .expand{
+	text-align: center;
+	transform: translateX(-3%);
+	cursor: pointer;
+}
 .todo_row .toolbar{
+	width: 100%;
 	padding: .5rem 0;
 	text-align: right;
 }
