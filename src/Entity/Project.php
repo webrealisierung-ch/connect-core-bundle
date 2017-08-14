@@ -56,7 +56,7 @@ class Project
     /**
      * @ORM\Column(type="binary", length=16, options={"fixed": true})
      */
-    private $project_dir;
+    private $projectDir;
 
     /**
      * @ORM\Column(type="integer")
