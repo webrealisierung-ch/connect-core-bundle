@@ -14,7 +14,7 @@ $GLOBALS['BE_MOD']= array_merge(
                 'callback'          => 'Wr\Connect\CoreBundle\Contao\BackendModule\Cockpit',
                 'tables' => array('tl_wr_todo','tl_wr_status'),
             ),
-            'project' => array
+            'projects' => array
             (
                 'tables' => array('tl_wr_project','tl_wr_todo','tl_wr_time','tl_wr_status'),
             )

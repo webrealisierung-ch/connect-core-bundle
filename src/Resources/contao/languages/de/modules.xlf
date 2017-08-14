@@ -10,11 +10,11 @@
                 <source>Overview over project, clients and todos</source>
                 <target>Überblick über Projekte, Kunden und Pendenzen</target>
             </trans-unit>
-            <trans-unit id="MOD.project.0">
+            <trans-unit id="MOD.projects.0">
                 <source>Projects</source>
                 <target>Projekte</target>
             </trans-unit>
-            <trans-unit id="MOD.project.1">
+            <trans-unit id="MOD.projects.1">
                 <source>Manage project and todos</source>
                 <target>Verwaltung von Projekten und Pendenzen</target>
             </trans-unit>
