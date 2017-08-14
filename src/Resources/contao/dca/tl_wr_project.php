@@ -61,7 +61,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
     'palettes' => array
     (
         '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,author,alias,owner,workers;{description_legend},description;{files_legend},project_dir;{project_protected_legend},protected;{active_legend},published'
+        'default'                     => '{title_legend},title,author,alias,owner,workers;{description_legend},description;{files_legend},projectDir;{project_protected_legend},protected;{active_legend},published'
     ),
     // Subpalettes
     'subpalettes' => array
@@ -134,9 +134,9 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'search'                  => true,
             'eval'                    => array('rte'=>'tinyMCE', 'tl_class'=>'clr'),
         ),
-        'project_dir' => array
+        'projectDir' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['project_dir'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['projectDir'],
             'exclude'                 => true,
             'inputType'               => 'fileTree',
             'eval'                    => array('fieldType'=>'radio', 'tl_class'=>'clr', 'mandatory'=>true),
