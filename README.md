@@ -4,19 +4,19 @@ This bundle adds functionality to manage projects, todos and time to the Contao 
 
 ## Attention
 
-This bundle is currently under development. You can use it on your own risk! A stable version will be available soon. Of course you can submit issues and feature requests on the repository issue section. Thx! 
+This bundle is currently under development. You can use it at your own risk! A stable version will be available soon. Of course you can submit issues and feature requests on the [repository issue section](https://github.com/webrealisierung-ch/connect-core-bundle/issues). Thx! 
 
 ## Installation
 
-### contao/standard-edition
+### Contao Standard Edition
 
-Run in your project folder the following composer command to add the Connect Bundle to your project.
+Run in your project folder the following composer command to add the Connect Bundle to your project:
 
-```
+```console
     ./composer require wr/connect-core-bundle
 ```
 
-Add the Bundle to app/AppKernel.php bundles array after all the contao bundles.
+Add the Bundle to `app/AppKernel.php` bundles array after all the Contao bundles:
 
 ```php
 public function registerBundles()
@@ -32,66 +32,66 @@ public function registerBundles()
     }
 ```
 
-Clear the chache and warmup the cache with the follwing two commands.
+Clear the cache and warmup the cache with the following two commands:
 
-``` 
+```console
     ./bin/console cache:clear --no-warmup --env=prod
     ./bin/console cache:warmup  --env=prod
 ```
 
-Go to the install tool and update the database and then login in the to backend.
+Go to the install tool and update the database. Then login into the back end.
 
-### contao-managed-edition
+### Contao Managed Edition
 
-**Without the awesome Contao Manger**
+**Without the awesome Contao Manager**
 
-Run in your project folder the following composer command to add the Connect Bundle to your project.
+Run in your project folder the following composer command to add the Connect Bundle to your project:
 
-```
+```console
     composer require wr/connect-core-bundle
 ```
 
-Clear the chache and warmup the cache with the follwing two commands.
+Clear the cache and warmup the cache with the following two commands:
 
-``` 
-    ./bin/console cache:clear --no-warmup --env=prod
-    ./bin/console cache:warmup  --env=prod
+```console
+    vendor/bin/contao-console cache:clear --no-warmup
+    vendor/bin/contao-console cache:warmup
 ```
 
-Go to the install tool and update the database and then login in the to backend.
+Go to the install tool and update the database. Then login into the back end.
 
-**With the awesome Contao Manger**
+**With the awesome Contao Manager**
 
-1. Search in the Contao Manager search bar the bundle wr/connect-core-bundle and click on the install button.
-2. Go to the install tool and update the database and then login in the to backend.
+1. Search in the Contao Manager search bar the bundle `wr/connect-core-bundle` and click on the install button.
+2. Go to the install tool and update the database. Then login into the back end.
 
 
 ## Dependencies
 
-- php ^7.0
-- symfony/symfony
-- contao/core-bundle
-- doctrine/orm
+- `php ^7.0`
+- `symfony/symfony`
+- `contao/core-bundle`
+- `doctrine/orm`
 
 ## Licence
 
-The Connect Core Bundle is published under the LGPLv3
+The Connect Core Bundle is published under the LGPLv3.
 
 ## Documentation
 
-Unfortunately at the moment there is no documentation available. But we will fix this as soon as there is a stable version.
+Unfortunately, at the moment there is no documentation available. But we will fix this as soon as there is a stable version.
  
  ## Contact
  
- For further information feel free and get in contact with us. mail@webrealisierung.ch
+ For further information feel free and get in contact with us: mail@webrealisierung.ch
  
  ## Donation
  
  If you like our work feel free to donate.
  
- There are many ways to donate to the project. The following list contains some possibilities.
+ There are many ways to donate to the project. The following list contains some possibilities:
  
- - Constribute your code over pull requests.
+ - Contribute your code over pull requests.
  - Test, test, test and feedback.
  - Submit features or issues.
  - Tell us a joke.
