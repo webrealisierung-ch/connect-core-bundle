@@ -10,7 +10,7 @@ This bundle is currently under development. You can use it at your own risk! A s
 
 ### Contao Standard Edition
 
-Run in your project folder the following composer command to add the Connect Bundle to your project:
+Run in your project folder the following Composer command to add the Connect Bundle to your project:
 
 ```console
     ./composer require wr/connect-core-bundle
@@ -45,7 +45,7 @@ Go to the install tool and update the database. Then login into the back end.
 
 **Without the awesome Contao Manager**
 
-Run in your project folder the following composer command to add the Connect Bundle to your project:
+Run in your project folder the following Composer command to add the Connect Bundle to your project:
 
 ```console
     composer require wr/connect-core-bundle
