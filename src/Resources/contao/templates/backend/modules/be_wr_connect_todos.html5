@@ -14,6 +14,7 @@
                 <div class="description"><?= $todo->getDescription(); ?></div>
                 <div class="expand"><img src="/bundles/connectcore/more-horizontal.svg"></div>
                 <div class="toolbar">
+                    <?= $todo->getPid() ?>
                     <?php if($this->messages): ?>
                         <a href="#"><img src="/bundles/connectcore/message-square.svg"></a>
                     <?php endif; ?>
