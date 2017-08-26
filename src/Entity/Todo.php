@@ -3,6 +3,7 @@
 namespace Wr\Connect\CoreBundle\Entity;
 
 use \Doctrine\ORM\Mapping as ORM;
+use \Doctrine\ORM\Mapping\JoinColumn;
 
 /**
  * @ORM\Entity(repositoryClass="Wr\Connect\CoreBundle\Repository\TodoRepository")
@@ -19,9 +20,10 @@ class Todo
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="todos")
+     * @JoinColumn(name="pid", referencedColumnName="id")
      */
-    private  $pid;
+    private  $project;
 
     /**
      * @ORM\Column(type="integer")
@@ -79,17 +81,17 @@ class Todo
     /**
      * @return mixed
      */
-    public function getPid()
+    public function getProject()
     {
-        return $this->pid;
+        return $this->project;
     }
 
     /**
-     * @param mixed $pid
+     * @param mixed $project
      */
-    public function setPid($pid)
+    public function setProject(Project $project)
     {
-        $this->pid = $pid;
+        $this->project = $project;
     }
 
     /**
