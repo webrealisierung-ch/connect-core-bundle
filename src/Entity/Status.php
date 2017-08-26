@@ -48,6 +48,11 @@ class Status
     private $color;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $isDefault;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -151,5 +156,21 @@ class Status
         $this->color = $color;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getisDefault()
+    {
+        return $this->isDefault;
+    }
+
+    /**
+     * @param mixed $isDefault
+     */
+    public function setIsDefault($isDefault)
+    {
+        $this->isDefault = $isDefault;
+    }
+     
 
 }
