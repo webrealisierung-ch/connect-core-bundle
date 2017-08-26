@@ -14,14 +14,19 @@
                 <div class="description"><?= $todo->getDescription(); ?></div>
                 <div class="expand"><img src="/bundles/connectcore/more-horizontal.svg"></div>
                 <div class="toolbar">
-                    <?= $todo->getPid() ?>
+                    <div class="project-tag">
+                        <?php if(strlen($todo->getProject()->getTitle())>20): ?>
+                            <?= substr($todo->getProject()->getTitle(),0, 20) ?>...
+                        <?php else: ?>
+                            <?= $todo->getProject()->getTitle() ?>
+                        <?php endif;?>
+                    </div>
                     <?php if($this->messages): ?>
                         <a href="#"><img src="/bundles/connectcore/message-square.svg"></a>
                     <?php endif; ?>
                     <a href="<?= \Backend::addToUrl("do=projects&table=tl_wr_todo&id=".$todo->getId()."&act=edit"); ?>" title="Todo ID <?=$todo->getId()?> bearbeiten"><img src="system/themes/flexible/icons/edit.svg" width="16" height="16" alt="Artikel bearbeiten"></a>
                 </div>
             </div>
-
             <span class="move"><img src="/bundles/connectcore/move.svg"></span>
         </div>
     <?php endforeach; ?>

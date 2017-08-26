@@ -6,7 +6,7 @@
             <?= $statusBoard ?>
         <?php endforeach; ?>
     <?php else: ?>
-        Keine Pendenzen erfasst!
+        Beginne jetzt und lege hier neue Status Boards an. Todo Link zur Status Board Erstellung.
     <?php endif; ?>
     </div>
 </div>
