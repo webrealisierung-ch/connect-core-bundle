@@ -63,4 +63,21 @@ class TodoRepository extends EntityRepository
             ->getQuery()
             ->execute();
     }
+
+    /**
+     * @return Todo[]
+     */
+    public function findByStatusAndByUserAndByProjectIsNotClosed($user,$statusId,$order="DESC"){
+        return $this->createQueryBuilder('todo')
+            ->where('todo.author= :user')
+            ->setParameter(':user', $user->id)
+            ->andWhere('todo.status= :isActive')
+            ->setParameter('isActive', $statusId)
+            ->innerJoin('todo.project','project')
+            ->andWhere("project.closed= :isClosed")
+            ->setParameter('isClosed',0)
+            ->orderBy('todo.id',$order)
+            ->getQuery()
+            ->execute();
+    }
 }
