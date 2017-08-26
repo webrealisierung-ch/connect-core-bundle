@@ -123,7 +123,6 @@ $GLOBALS['TL_DCA']['tl_wr_todo'] = array
         ),
         'status' => array
         (
-            'default'                 => 0,
             'exclude'                 => true,
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_todo']['status'],
             'inputType'               => 'select',

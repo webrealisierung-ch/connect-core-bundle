@@ -61,14 +61,11 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
     ),
     'palettes' => array
     (
-        '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,author,alias,owner,workers;{description_legend},description;{files_legend},projectDir;{active_legend},active,start,stop'
+        '__selector__'                => array('periodOfTime'),
+        'default'                     => '{title_legend},title,author,alias,owner;{description_legend},description;{files_legend},projectDir;{publish_legend},periodOfTime,closed'
     ),
-    // Subpalettes
-    'subpalettes' => array
-    (
-        'protected'                   => 'groups',
-        'published'                   => 'start,stop'
+    'subpalettes' => array(
+        'periodOfTime'                =>'start,stop'
     ),
     // Fields
     'fields' => array
@@ -118,15 +115,6 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'options_callback'        => array('tl_wr_project', 'getWorkers'),
             'eval'                    => array('doNotCopy'=>true, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
         ),
-        'workers' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['worker'],
-            'exclude'                 => true,
-            'search'                  => true,
-            'inputType'               => 'select',
-            'options_callback'        => array('tl_wr_project', 'getWorkers'),
-            'eval'                    => array('doNotCopy'=>true, 'multiple'=>true, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
-        ),
         'description' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['description'],
@@ -142,26 +130,33 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'inputType'               => 'fileTree',
             'eval'                    => array('fieldType'=>'radio', 'tl_class'=>'clr', 'mandatory'=>true),
         ),
-        'active' => array
+        'periodOfTime' => array
         (
             'exclude'                 => true,
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['active'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['periodOfTime'],
             'inputType'               => 'checkbox',
-            'eval'                    => array('submitOnChange'=>true, 'doNotCopy'=>true),
+            'eval'                    => array('submitOnChange'=>true,'doNotCopy'=>true),
         ),
         'start' => array
         (
             'exclude'                 => true,
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['start'],
             'inputType'               => 'text',
-            'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+            'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
         ),
         'stop' => array
         (
             'exclude'                 => true,
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['stop'],
             'inputType'               => 'text',
-            'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+            'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+        ),
+        'closed' => array
+        (
+            'exclude'                 => true,
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['closed'],
+            'inputType'               => 'checkbox',
+            'eval'                    => array('doNotCopy'=>true, 'tl_class'=>'w50 clr'),
         )
     )
 );

@@ -2,7 +2,7 @@
 <xliff version="1.1">
     <file datatype="php" original="system/modules/wr_connect/languages/en/tl_wr_project.php" source-language="en">
         <body>
-            <trans-unit id="tl_wr_project.project_title_legend">
+            <trans-unit id="tl_wr_project.title_legend">
                 <source>Project</source>
             </trans-unit>
             <trans-unit id="tl_wr_project.title.0">
@@ -20,17 +20,38 @@
             <trans-unit id="tl_wr_project.worker.0">
                 <source>Worker</source>
             </trans-unit>
-            <trans-unit id="tl_wr_project.project_teaser_legend">
-                <source>Project Description</source>
-            </trans-unit>
-            <trans-unit id="tl_wr_project.teaser.0">
+            <trans-unit id="tl_wr_project.description_legend">
                 <source>Description</source>
             </trans-unit>
-            <trans-unit id="tl_wr_project.project_files_legend">
+            <trans-unit id="tl_wr_project.description.0">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.files_legend">
                 <source>Project Files</source>
             </trans-unit>
             <trans-unit id="tl_wr_project.projectDir.0">
                 <source>Directory</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.publish_legend">
+                <source>Period of time</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.periodOfTime.0">
+                <source>Period of time</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.periodOfTime.1">
+                <source>Add a start and stop date.</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.start.0">
+                <source>Start date</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.stop.0">
+                <source>Stop date</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.closed.0">
+                <source>Closed</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_project.closed.1">
+                <source>If checked the project is closed.</source>
             </trans-unit>
             <trans-unit id="tl_wr_project.new.0">
                 <source>New project</source>
