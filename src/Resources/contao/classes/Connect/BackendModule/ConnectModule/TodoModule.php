@@ -16,7 +16,6 @@ class TodoModule
     {
         $entityManager = \Contao\System::getContainer()->get('doctrine.orm.default_entity_manager');
 
-
         $todoTemplate = new \BackendTemplate($this->todoTemplate);
         $statusBoardsTemplate = new \BackendTemplate($this->statusTemplate);
 
@@ -29,7 +28,8 @@ class TodoModule
         $allStatusEntries = $repoStatus->findAll();
 
         foreach($allStatusEntries as $status){
-            $todos=$repoTodo->findStatusByUserOrderedByDate($this->user,$status->getId());
+            //$todos=$repoTodo->findStatusByUserOrderedByDate($this->user,$status->getId());
+            $todos=$repoTodo->findByStatusAndByUserAndByProjectIsNotClosed($this->user,$status->getId());
             $todoTemplate->class="status_board";
             $todoTemplate->title=$status->getTitle();
             $todoTemplate->color=$status->getColor();
