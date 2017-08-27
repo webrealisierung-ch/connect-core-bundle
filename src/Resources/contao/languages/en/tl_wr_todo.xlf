@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="system/modules/wr_connect/languages/en/tl_wr_todo.php" source-language="en">
+        <body>
+            <trans-unit id="tl_wr_todo.title_legend">
+                <source>To do</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.title.0">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.author.0">
+                <source>Assign to</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.alias.0">
+                <source>Alias</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.pid.0">
+                <source>Project</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.description_legend">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.description.0">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.parameters_legend">
+                <source>Parameters</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.status.0">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.priority.0">
+                <source>Priority</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.deadline.0">
+                <source>Deadline</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.new.0">
+                <source>New to do</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.edit.1">
+                <source>Edit to do</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.todo.1">
+                <source>Edit to dos</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.time.1">
+                <source>Edit time</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_todo.delete.1">
+                <source>Delete to do</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
