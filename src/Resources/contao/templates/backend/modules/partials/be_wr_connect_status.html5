@@ -1,5 +1,5 @@
 <div class="<?= $this->class ?>">
-    <h2>Todos</h2>
+    <h2>To do's</h2>
     <div class="status_boards">
     <?php if($this->statusBoards): ?>
         <?php foreach($this->statusBoards as $statusBoard): ?>
