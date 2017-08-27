@@ -1,9 +1,9 @@
 <?php
 
 if(TL_MODE=="BE"){
-    $GLOBALS['TL_CSS'][]="bundles/connectcore/connect.css";
+    $GLOBALS['TL_CSS'][]="bundles/connectcore/css/connect.css";
+    $GLOBALS['TL_JAVASCRIPT'][]="bundles/connectcore/js/connect.js";
 }
-
 $GLOBALS['BE_MOD']= array_merge(
     array
     (
