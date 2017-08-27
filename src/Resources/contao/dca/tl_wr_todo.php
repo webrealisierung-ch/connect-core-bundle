@@ -71,6 +71,7 @@ $GLOBALS['TL_DCA']['tl_wr_todo'] = array
         ),
         'pid' => array
         (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_todo']['pid'],
             'inputType'               => 'select',
             'foreignKey'              => 'tl_wr_project.title',
             'eval'                    => array('doNotCopy'=>true, 'mandatory'=>true, 'multiple'=>false, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
