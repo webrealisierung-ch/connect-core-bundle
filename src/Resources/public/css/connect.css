@@ -1,0 +1,102 @@
+#tl_navigation .group-connect{
+	background-image:url(/bundles/connectcore/grid.svg);
+	background-position:3px 2px;
+	background-repeat:no-repeat no-repeat;
+}
+.connect{
+	margin: 0 15px;
+}
+.connect > * {
+	margin: 15px 0;
+}
+.status_boards{
+	display: flex;
+	flex-wrap: wrap;
+}
+.todos .actions{
+	width: 100%;
+	/*background-color: #00b0e8;*/
+}
+.status_board{
+	box-sizing: border-box;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+	border: 2px dashed #d2d2d2;
+	width: 32.66%;
+	margin: 10px .66% 0 0;
+}
+.status_board > p{
+	padding: 0 0 0.5em 0;
+	margin-bottom: 0;
+}
+/* <--- TODO correct boards styling! */
+.todos .in_process{
+	width: 32.66%;
+	margin: 1% .33% 0 .33%;
+}
+.todos .closed{
+	width: 32.66%;
+	margin: 1% 0 0 .66%;
+}
+/* --> */
+.todo_row{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #e3e3e3;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	cursor: move;
+}
+.todo_row:hover{
+	box-shadow: 0 0 5px #e5e5e5;
+}
+.todo_row a{
+	opacity: 0;
+ }
+.todo_row:hover a{
+	opacity: 1;
+}
+.todo_row .column_left{
+	height: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0 5px 0 0;
+}
+.todo_row  .column_right{
+	flex: 1;
+}
+.todo_row .description{
+	height: 1.1em;
+	overflow: hidden;
+}
+.todo_row .description.open{
+	height: auto;
+}
+.todo_row .expand{
+	text-align: center;
+	transform: translateX(-3%);
+	cursor: pointer;
+}
+.todo_row .toolbar{
+	width: 100%;
+	padding: .5rem 0;
+	text-align: right;
+}
+.todo_row .toolbar .project-tag{
+	background-color: #efefef;
+	padding: 0.3em 0.5em;
+	margin: 0 0.4em 0 0;
+	display: inline-block;
+	border-radius: 3px;
+	float: left;
+}
+.todos .column_left img{
+	max-width: 100%;
+	height: auto;
+}
+.todo_row .move{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
