@@ -71,6 +71,11 @@ class Todo
     private $priority;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $statusChanged;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -238,5 +243,20 @@ class Todo
         $this->priority = $priority;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getStatusChanged()
+    {
+        return $this->statusChanged;
+    }
+
+    /**
+     * @param mixed $statusChanged
+     */
+    public function setStatusChanged($statusChanged)
+    {
+        $this->statusChanged = $statusChanged;
+    }
 
 }

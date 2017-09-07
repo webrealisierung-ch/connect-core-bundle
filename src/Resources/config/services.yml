@@ -1,0 +1,20 @@
+services:
+    #_defaults:
+    #    autowire: true
+    #    autoconfigure: true
+    #    public: false
+    #Wr\Connect\CoreBundle\Service\:
+    #    resource: '../../Service/*'
+    wr.connect.status_manager:
+        class: Wr\Connect\CoreBundle\Service\Todo\Status\StatusManager
+        autowire: false
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@wr.connect.todo_manager'
+            - '@twig'
+    wr.connect.todo_manager:
+        class: Wr\Connect\CoreBundle\Service\Todo\TodoManager
+        autowire: false
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@twig'

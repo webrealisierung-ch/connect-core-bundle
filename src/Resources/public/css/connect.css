@@ -1,3 +1,10 @@
+.header_status{
+	background-image: url(/bundles/connectcore/bar-status.svg);
+	padding: 3px 0 3px 19px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	margin-left: 15px
+}
 #tl_navigation .group-connect{
 	background-image:url(/bundles/connectcore/grid.svg);
 	background-position:3px 2px;
@@ -83,7 +90,7 @@
 	text-align: right;
 }
 .todo_row .toolbar .project-tag{
-	background-color: #efefef;
+	border: 1px solid #e3e3e3;
 	padding: 0.3em 0.5em;
 	margin: 0 0.4em 0 0;
 	display: inline-block;

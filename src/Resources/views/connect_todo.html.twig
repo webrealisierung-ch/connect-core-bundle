@@ -1,0 +1,32 @@
+{% for todo in todos %}
+    <div id="{{todo.alias}}" class="todo_row" style="border-left: 5px solid #{{status.color}} ;" draggable="true" ondragstart="Connect.Todo.drag(event)">
+        <div class="column_left">
+            {% if  todo.priority == 2 %}
+                <img src="/bundles/connectcore/alert-triangle.svg">
+            {% endif %}
+            {% if  todo.priority == 1 %}
+                <img src="/bundles/connectcore/alert-circle.svg">
+            {% endif %}
+        </div>
+        <div class="column_right">
+            <h3>{{todo.title}}</h3>
+            {% if todo.description is not empty %}
+                <div class="description">{{ todo.description|striptags }}</div>
+                <div class="expand" onclick="Connect.Todo.toggleClass(event,this)"><img src="/bundles/connectcore/more-horizontal.svg"></div>
+            {% endif %}
+            <div class="toolbar">
+                <div class="project-tag">
+                    {% if  todo.project.title|length > 20 %}
+                        {{ todo.project.title|slice(0,20) }}...
+                    {% else %}
+                        {{ todo.project.title() }}
+                    {% endif %}
+                </div>
+                {% if todo.messages is defined %}
+                    <a href="#"><img src="/bundles/connectcore/message-square.svg"></a>
+                {% endif %}
+                <a href="{{ addToBackendUrl(todo.id)|raw }}" title="Todo ID {{ todo.id }} bearbeiten"><img src="system/themes/flexible/icons/edit.svg" width="16" height="16" alt="Artikel bearbeiten"></a>
+            </div>
+        </div>
+    </div>
+{% endfor %}

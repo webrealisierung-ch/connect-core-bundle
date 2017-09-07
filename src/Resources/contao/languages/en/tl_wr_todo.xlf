@@ -50,6 +50,9 @@
             <trans-unit id="tl_wr_todo.delete.1">
                 <source>Delete to do</source>
             </trans-unit>
+            <trans-unit id="tl_wr_todo.status.0">
+                <source>Edit Status Boards</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

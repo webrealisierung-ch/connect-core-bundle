@@ -37,6 +37,7 @@ $GLOBALS['TL_DCA']['tl_wr_todo'] = array
                 'label'               => &$GLOBALS['TL_LANG']['tl_wr_todo']['edit'],
                 'href'                => 'act=edit',
                 'icon'                => 'edit.gif',
+                'attributes'          => '%s'
             ),
             'delete' => array
             (
@@ -49,7 +50,7 @@ $GLOBALS['TL_DCA']['tl_wr_todo'] = array
         'global_operations' => array(
             'status' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_wr_status']['status'],
+                'label'               => &$GLOBALS['TL_LANG']['tl_wr_todo']['status'],
                 'href'                => 'table=tl_wr_status',
                 'class'               => 'header_status',
                 'attributes'          => 'onclick="Backend.getScrollOffset()"',

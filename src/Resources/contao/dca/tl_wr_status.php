@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
     'palettes' => array
     (
         '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,color'
+        'default'                     => '{title_legend},title,color,showTodosAfterDays,showIfProjectIsClosed,isDefault'
     ),
     // Fields
     'fields' => array
@@ -50,19 +50,41 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
         ),
         'title' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_service']['title'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['title'],
             'exclude'                 => true,
             'inputType'               => 'text',
             'search'                  => true,
             'eval'                    => array('mandatory'=>true, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50'),
         ),
         'color' => array(
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_service']['title'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['title'],
             'exclude'                 => true,
             'inputType'               => 'text',
             'search'                  => true,
             'eval'                    => array('mandatory'=>true, 'colorpicker'=>true, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
+        ),
+        'showIfProjectIsClosed' => array(
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['showIfProjectIsClosed'],
+            'exclude'                 => true,
+            'inputType'               => 'checkbox',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'clr w50 wizard'),
+        ),
+        'isDefault' => array(
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['isDefault'],
+            'exclude'                 => true,
+            'inputType'               => 'checkbox',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
+        ),
+        'showTodosAfterDays' => array(
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['showTodosAfterDays'],
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
         )
+
     )
 );
 

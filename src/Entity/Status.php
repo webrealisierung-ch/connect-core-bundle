@@ -50,7 +50,17 @@ class Status
     /**
      * @ORM\Column(type="integer")
      */
+    private $showIfProjectIsClosed;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $isDefault;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $showTodosAfterDays;
 
     /**
      * @return mixed
@@ -171,6 +181,36 @@ class Status
     {
         $this->isDefault = $isDefault;
     }
-     
 
+    /**
+     * @return mixed
+     */
+    public function getShowIfProjectIsClosed()
+    {
+        return $this->showIfProjectIsClosed;
+    }
+
+    /**
+     * @param mixed $showIfProjectIsClosed
+     */
+    public function setShowIfProjectIsClosed($showIfProjectIsClosed)
+    {
+        $this->showIfProjectIsClosed = $showIfProjectIsClosed;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShowTodosAfterDays()
+    {
+        return $this->showTodosAfterDays;
+    }
+
+    /**
+     * @param mixed $showTodosAfterDays
+     */
+    public function setShowTodosAfterDays($showTodosAfterDays)
+    {
+        $this->showTodosAfterDays = $showTodosAfterDays;
+    }
 }

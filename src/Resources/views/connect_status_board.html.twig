@@ -1,0 +1,4 @@
+<div id="statusBoard{{ statusBoard.title  }}" class="{{ class }}" ondrop="Connect.Todo.drop(event)" ondragover="Connect.Todo.allowDrop(event)">
+    <p>{{ statusBoard.title }}</p>
+    {{ todos|raw }}
+</div>

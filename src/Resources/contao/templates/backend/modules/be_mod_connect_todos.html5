@@ -1,0 +1,10 @@
+<div class="<?= $this->class ?>">
+    <h2>To do's</h2>
+    <div class="status_boards">
+        <?php if(!empty($this->statusBoards)): ?>
+                <?= $this->statusBoards ?>
+        <?php else: ?>
+            Beginne jetzt und lege hier neue Status Boards an. Todo Link zur Status Board Erstellung.
+        <?php endif; ?>
+    </div>
+</div>
