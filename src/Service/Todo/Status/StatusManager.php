@@ -9,7 +9,7 @@
 namespace Wr\Connect\CoreBundle\Service\Todo\Status;
 use Contao\BackendUser;
 use Doctrine\ORM\EntityManager;
-use Symfony\Bundle\TwigBundle\TwigEngine;
+use Twig\Environment;
 use Wr\Connect\CoreBundle\Entity\Status;
 use Wr\Connect\CoreBundle\Service\Todo\TodoManager;
 
@@ -24,7 +24,7 @@ class StatusManager
     private $todoManager;
     private $twig;
 
-    public function __construct(EntityManager $entityManager, TodoManager $todoManager, TwigEngine $twig)
+    public function __construct(EntityManager $entityManager, TodoManager $todoManager, Environment $twig)
     {
         $this->entityManager = $entityManager;
         $this->todoManager = $todoManager;
