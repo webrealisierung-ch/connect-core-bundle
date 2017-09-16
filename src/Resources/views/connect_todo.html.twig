@@ -1,5 +1,5 @@
 {% for todo in todos %}
-    <div id="{{todo.alias}}" class="todo_row" style="border-left: 5px solid #{{status.color}} ;" draggable="true" ondragstart="Connect.Todo.drag(event)">
+    <div id="todo{{todo.id}}" class="todo_row" style="border-left: 5px solid #{{status.color}} ;" draggable="true" ondragstart="Connect.Todo.drag(event)">
         <div class="column_left">
             {% if  todo.priority == 2 %}
                 <img src="/bundles/connectcore/alert-triangle.svg">
