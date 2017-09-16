@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
     'palettes' => array
     (
         '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,color,showTodosAfterDays,showIfProjectIsClosed,isDefault'
+        'default'                     => '{title_legend},title,alias,color,showTodosAfterDays,showIfProjectIsClosed,isDefault'
     ),
     // Fields
     'fields' => array
@@ -55,6 +55,16 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
             'inputType'               => 'text',
             'search'                  => true,
             'eval'                    => array('mandatory'=>true, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50'),
+        ),
+        'alias' => array
+        (
+            'label'                   => array("alias",'aliasDesc'),
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'save_callback'           => array(
+                array('wr.connect.todo_generate_alias', 'generateAlias')
+            ),
+            'eval'                    => array('maxlength=>255','tl_class' => 'w50')
         ),
         'color' => array(
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['title'],
@@ -91,6 +101,13 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
 
 class tl_wr_status
 {
+    private $Database;
+
+    public function __construct()
+    {
+        $this->Database = \Contao\Database::getInstance();
+    }
+
     public function listChild($row){
         return $row['title'];
     }
