@@ -2,7 +2,6 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-console.log(window);
 
 
 Connect = {
@@ -31,11 +30,32 @@ Connect = {
         drop: function(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
-            console.log(ev);
-            ev.target.appendChild(document.getElementById(data));
+            var droppedElement = document.getElementById(data);
+            var todoId=this.getElementId(droppedElement,'todo');
+
+            if(ev.target.className == "status_board") {
+                statusBoard=ev.target;
+                ev.target.appendChild(document.getElementById(data));
+            } else {
+                statusBoard=ev.target.closest(".status_board");
+                ev.target.closest(".status_board").appendChild(document.getElementById(data));
+            }
+            statusId=this.getElementId(statusBoard,'statusBoard');
+            console.log(window.location);
+            this.changeStatus(todoId,statusId);
         },
         allowDrop: function(ev) {
             ev.preventDefault();
+        },
+        changeStatus: function (todoId,statusId) {
+            var xhttp;
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", window.location.href+"&status_id="+statusId+"&todo_id="+todoId+'REQUEST_TOKEN='+Contao.request_token, true);
+            xhttp.send();
+        },
+        getElementId: function (element,searchPattern) {
+            elementId=element.id.replace(searchPattern,'');
+            return elementId;
         }
     }
 };
