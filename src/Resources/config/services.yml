@@ -6,12 +6,20 @@ services:
     #Wr\Connect\CoreBundle\Service\:
     #    resource: '../../Service/*'
     wr.connect.status_manager:
-        class: Wr\Connect\CoreBundle\Service\Todo\Status\StatusManager
+        class: Wr\Connect\CoreBundle\Service\Status\StatusManager
         autowire: false
         arguments:
             - '@doctrine.orm.default_entity_manager'
             - '@wr.connect.todo_manager'
             - '@twig'
+    wr.connect.todo_generate_alias:
+        class: Wr\Connect\CoreBundle\Service\Todo\TodoGenerateAlias
+        autowire: false
+    wr.connect.todo_change_status:
+        class: Wr\Connect\CoreBundle\Service\Todo\TodoChangeStatus
+        autowire: false:
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
     wr.connect.todo_manager:
         class: Wr\Connect\CoreBundle\Service\Todo\TodoManager
         autowire: false
