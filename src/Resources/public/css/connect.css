@@ -73,7 +73,7 @@
 	flex: 1;
 }
 .todo_row .description{
-	height: 1.1em;
+	height: 0;
 	overflow: hidden;
 }
 .todo_row .description.open{
