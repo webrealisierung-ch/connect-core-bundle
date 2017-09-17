@@ -15,7 +15,7 @@
                 <div class="expand" onclick="Connect.Todo.toggleClass(event,this)"><img src="/bundles/connectcore/more-horizontal.svg"></div>
             {% endif %}
             <div class="toolbar">
-                <div class="project-tag">
+                <div class="project-tag" title="{{ todo.project.title }}">
                     {% if  todo.project.title|length > 20 %}
                         {{ todo.project.title|slice(0,20) }}...
                     {% else %}
