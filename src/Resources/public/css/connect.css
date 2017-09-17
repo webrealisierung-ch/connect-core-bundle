@@ -26,12 +26,13 @@
 }
 .status_board{
 	box-sizing: border-box;
-	padding: 0.5rem 0.5rem 0 0.5rem;
-	border: 2px dashed #d2d2d2;
+	padding: 0.5rem 0.35rem 0 0.35rem;
+	border: 1px dashed #dfdfdf;
 	width: 32.66%;
-	margin: 10px .66% 0 0;
+	margin: .7% .66% 0 0;
+	background-color: #fafafa;
 }
-.status_board > p{
+.status_board > h2{
 	padding: 0 0 0.5em 0;
 	margin-bottom: 0;
 }
@@ -53,6 +54,7 @@
 	padding: 5px;
 	margin: 0 0 10px 0;
 	cursor: move;
+	background-color: #fff;
 }
 .todo_row:hover{
 	box-shadow: 0 0 5px #e5e5e5;
@@ -77,6 +79,7 @@
 	overflow: hidden;
 }
 .todo_row .description.open{
+	margin: 0.5rem 0 0;
 	height: auto;
 }
 .todo_row .expand{
