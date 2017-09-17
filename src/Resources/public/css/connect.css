@@ -28,9 +28,11 @@
 	box-sizing: border-box;
 	padding: 0.5rem 0.35rem 0 0.35rem;
 	border: 1px dashed #dfdfdf;
-	width: 32.66%;
+	width: 23.66%;
 	margin: .7% .66% 0 0;
 	background-color: #fafafa;
+	max-height: 700px;
+	overflow: scroll;
 }
 .status_board > h2{
 	padding: 0 0 0.5em 0;
