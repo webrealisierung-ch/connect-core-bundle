@@ -101,6 +101,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'default'                 => BackendUser::getInstance()->id,
             'exclude'                 => true,
             'search'                  => true,
+            'filter'                  => true,
             'inputType'               => 'select',
             'foreignKey'              => 'tl_user.name',
             'eval'                    => array('doNotCopy'=>true, 'mandatory'=>true, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
@@ -111,6 +112,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['owner'],
             'exclude'                 => true,
             'search'                  => true,
+            'filter'                  => true,
             'inputType'               => 'select',
             'options_callback'        => array('tl_wr_project', 'getWorkers'),
             'eval'                    => array('doNotCopy'=>true, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
@@ -154,6 +156,7 @@ $GLOBALS['TL_DCA']['tl_wr_project'] = array
         'closed' => array
         (
             'exclude'                 => true,
+            'filter'                  => true,
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_project']['closed'],
             'inputType'               => 'checkbox',
             'eval'                    => array('doNotCopy'=>true, 'tl_class'=>'w50 clr'),
@@ -225,5 +228,6 @@ class tl_wr_project extends Backend
             }
             return $arrWorker;
         }
+        return array();
     }
 }
