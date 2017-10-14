@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
     'palettes' => array
     (
         '__selector__'                => array('protected', 'published'),
-        'default'                     => '{title_legend},title,alias,color,showTodosAfterDays,showIfProjectIsClosed,isDefault'
+        'default'                     => '{title_legend},title,alias,color,showTodosAfterDays,showTodosIfProjectIsClosed,isDefault'
     ),
     // Fields
     'fields' => array
@@ -62,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
             'exclude'                 => true,
             'inputType'               => 'text',
             'save_callback'           => array(
-                array('wr.connect.todo_generate_alias', 'generateAlias')
+                array('wr.connect.status.generate_alias', 'generateAlias'),
             ),
             'eval'                    => array('maxlength=>255','tl_class' => 'w50')
         ),
@@ -73,8 +73,8 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
             'search'                  => true,
             'eval'                    => array('mandatory'=>true, 'colorpicker'=>true, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
         ),
-        'showIfProjectIsClosed' => array(
-            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['showIfProjectIsClosed'],
+        'showTodosIfProjectIsClosed' => array(
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_status']['showTodosIfProjectIsClosed'],
             'exclude'                 => true,
             'inputType'               => 'checkbox',
             'search'                  => true,
@@ -85,6 +85,9 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
             'exclude'                 => true,
             'inputType'               => 'checkbox',
             'search'                  => true,
+            'save_callback'           => array(
+                array('wr.connect.status.check_is_default', 'check'),
+            ),
             'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
         ),
         'showTodosAfterDays' => array(
@@ -92,7 +95,7 @@ $GLOBALS['TL_DCA']['tl_wr_status'] = array(
             'exclude'                 => true,
             'inputType'               => 'text',
             'search'                  => true,
-            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
+            'eval'                    => array('rgxp' => 'prcnt', 'mandatory'=>false, 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class' => 'w50 wizard'),
         )
 
     )
