@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Wr\Connect\CoreBundle\Service\Todo;
+namespace Wr\Connect\CoreBundle\Status;
 
 
 use Contao\Database;
 use Contao\DataContainer;
 use Contao\StringUtil;
 
-class TodoGenerateAlias
+class GenerateAlias
 {
 
     private $database;
@@ -19,6 +19,7 @@ class TodoGenerateAlias
     }
 
     public function generateAlias($varValue, DataContainer $dc){
+
         $autoAlias = false;
 
         // Generate an alias if there is none

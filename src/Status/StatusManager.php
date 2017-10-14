@@ -6,12 +6,12 @@
  * @license LGPL-3.0+
  */
 
-namespace Wr\Connect\CoreBundle\Service\Status;
+namespace Wr\Connect\CoreBundle\Status;
 use Contao\BackendUser;
 use Doctrine\ORM\EntityManager;
 use Twig\Environment;
 use Wr\Connect\CoreBundle\Entity\Status;
-use Wr\Connect\CoreBundle\Service\Todo\TodoManager;
+use Wr\Connect\CoreBundle\Todo\TodoManager;
 
 
 /**

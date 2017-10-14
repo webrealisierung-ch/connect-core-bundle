@@ -1,13 +1,14 @@
 <?php
 
 
-namespace Wr\Connect\CoreBundle\Service\Todo;
+namespace Wr\Connect\CoreBundle\Todo;
 
 
+use Contao\User;
 use Doctrine\ORM\EntityManager;
 use Wr\Connect\CoreBundle\Entity\Todo;
 
-class TodoChangeStatus
+class ChangeStatus
 {
     private $entityManager;
 
@@ -16,13 +17,13 @@ class TodoChangeStatus
         $this->entityManager=$entityManager;
     }
 
-    public function changeStatus($todoId,$statusId){
+    public function execute($todoId,$statusId){
         $todoRepository = $this->entityManager->getRepository('Wr\Connect\CoreBundle\Entity\Todo');
         $todo = $todoRepository->findById($todoId);
-        $this->saveTodoChangeStatus($todo[0], $statusId);
+        $this->save($todo[0], $statusId);
     }
 
-    private function saveTodoChangeStatus(Todo $todo, $statusId)
+    private function save(Todo $todo, $statusId)
     {
         $todo->setStatus($statusId);
         $this->entityManager->persist($todo);

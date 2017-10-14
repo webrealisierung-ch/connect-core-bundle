@@ -1,6 +1,6 @@
 <?php
 
-namespace Wr\Connect\CoreBundle\Service\Todo;
+namespace Wr\Connect\CoreBundle\Todo;
 
 use Contao\Backend;
 use Contao\User;
