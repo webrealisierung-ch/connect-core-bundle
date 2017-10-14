@@ -17,9 +17,9 @@ class TodoModule
     public function compile()
     {
         $statusBoardsTemplate = new \BackendTemplate($this->statusTemplate);
+
         $container=System::getContainer();
         $statusBoards=$container->get('wr.connect.status_manager');
-
 
         /*
          *Preparation for Ajax Stuff
@@ -31,7 +31,9 @@ class TodoModule
 
         if(!empty($todoId)&&!empty($statusId))
         {
-            $container->get('wr.connect.todo_change_status')->changeStatus($todoId,$statusId);
+            if($check = $container->get('wr.connect.todo.assigned_to_user')->check($this->user,$todoId)){
+                $container->get('wr.connect.todo_change_status')->execute($todoId,$statusId);
+            }
         }
 
         $statusBoardsTemplate->class='todos';
