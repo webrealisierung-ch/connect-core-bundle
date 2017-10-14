@@ -4,6 +4,8 @@ This bundle adds functionality to manage projects, todos and time to the Contao 
 
 ## Attention
 
+**Breaking changes in the dev-master branch are possible. Do not use it in production!**
+
 This bundle is currently under development. You can use it at your own risk! A stable version will be available soon. Of course you can submit issues and feature requests on the [repository issue section](https://github.com/webrealisierung-ch/connect-core-bundle/issues). Thx! 
 
 ## Installation
