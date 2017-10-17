@@ -18,6 +18,11 @@ services:
     wr.connect.status.check_is_default:
         class: Wr\Connect\CoreBundle\Status\checkIsDefault
         autowire: false
+    wr.connect.todo.default_status:
+        class: Wr\Connect\CoreBundle\Todo\DefaultStatus
+        autowire: false
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
     wr.connect.todo_change_status:
         class: Wr\Connect\CoreBundle\Todo\ChangeStatus
         autowire: false:
