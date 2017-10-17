@@ -34,7 +34,16 @@ class TodoManager
     {
         $repoTodo = $this->entityManager->getRepository('Wr\Connect\CoreBundle\Entity\Todo');
 
-        $todos = $repoTodo->findByStatusAndByUserAndByProjectIsNotClosed($user, $status->getId());
+        if($status->getShowTodosAfterDays() > 0){
+            $time = time() - ($status->getShowTodosAfterDays() * 24 * 60 * 60);
+            $todos = $repoTodo->findByStatusAndByUserAndByShowAfterDays($user,$status->getId(),$time);
+        }
+        elseif($status->getShowTodosIfProjectIsClosed()){
+            $todos = $repoTodo->findByStatusByUserOrderedByDate($user,$status->getId());
+        } else{
+            $todos = $repoTodo->findByStatusAndByUserAndByProjectIsNotClosed($user, $status->getId());
+        }
+
         return $this->twig->render(
             '@ConnectCore/connect_todo.html.twig',
             [
