@@ -128,6 +128,7 @@ $GLOBALS['TL_DCA']['tl_wr_todo'] = array
             'exclude'                 => true,
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_todo']['status'],
             'inputType'               => 'select',
+            'default'                 => \Contao\System::getContainer()->get('wr.connect.todo.default_status')->get(),
             'foreignKey'              => 'tl_wr_status.title',
             'eval'                    => array('doNotCopy'=>true, 'chosen'=>true, 'mandatory'=>true, 'tl_class'=>'w50'),
         ),
