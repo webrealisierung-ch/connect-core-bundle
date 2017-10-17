@@ -49,7 +49,7 @@ class TodoRepository extends EntityRepository
             ->setParameter(':user', $user->id)
             ->andWhere('todo.status= :statusId')
             ->setParameter('statusId', $statusId)
-            ->andWhere('timestamp > :time')
+            ->andWhere('todo.timestamp > :time')
             ->setParameter('time',$time)
             ->orderBy('todo.id',$order)
             ->getQuery()
