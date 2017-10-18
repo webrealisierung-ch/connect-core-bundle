@@ -7,9 +7,11 @@
  */
 
 namespace Wr\Connect\CoreBundle\Status;
+use Contao\Backend;
 use Contao\BackendUser;
 use Doctrine\ORM\EntityManager;
 use Twig\Environment;
+use Twig\TwigFunction;
 use Wr\Connect\CoreBundle\Entity\Status;
 use Wr\Connect\CoreBundle\Todo\TodoManager;
 
@@ -29,6 +31,12 @@ class StatusManager
         $this->entityManager = $entityManager;
         $this->todoManager = $todoManager;
         $this->twig = $twig;
+        $function=new TwigFunction('addToBackendUrl',function($str){
+            return Backend::addToUrl($str);
+        });
+
+        $this->twig->addFunction($function);
+
     }
 
     public function generateStatusBoard($user){
