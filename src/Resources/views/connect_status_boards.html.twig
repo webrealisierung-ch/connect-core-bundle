@@ -1,1 +1,7 @@
-{{ boards|raw }}
+<h2>To do's</h2>
+<nav>
+    <a href="{{ addToBackendUrl('do=projects&table=tl_wr_todo&act=create&mode=2')|raw }}" class="header_new" title="" accesskey="n" onclick="Backend.getScrollOffset()">New to do</a>
+</nav>
+<div class="status_boards">
+    {{ boards|raw }}
+</div>
