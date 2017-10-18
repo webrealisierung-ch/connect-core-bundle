@@ -70,7 +70,7 @@ Go to the install tool and update the database. Then login into the back end.
 
 ## Dependencies
 
-- `php ^7.0`
+- `php ^7.1`
 - `symfony/symfony`
 - `contao/core-bundle`
 - `doctrine/orm`
