@@ -23,7 +23,7 @@ class TodoManager
         $this->entityManager = $entityManager;
         $this->twig = $twig;
 
-        $function=new TwigFunction('addToBackendUrl',function($id){
+        $function=new TwigFunction('newTodoLink',function($id){
             return Backend::addToUrl("do=projects&table=tl_wr_todo&id=".$id."&act=edit");
         });
 

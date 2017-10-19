@@ -25,7 +25,7 @@
                 {% if todo.messages is defined %}
                     <a href="#"><img src="/bundles/connectcore/message-square.svg"></a>
                 {% endif %}
-                <a href="{{ addToBackendUrl(todo.id)|raw }}" title="Todo ID {{ todo.id }} bearbeiten"><img src="system/themes/flexible/icons/edit.svg" width="16" height="16" alt="Artikel bearbeiten"></a>
+                <a href="{{ newTodoLink(todo.id)|raw }}" title="Todo ID {{ todo.id }} bearbeiten"><img src="system/themes/flexible/icons/edit.svg" width="16" height="16" alt="Artikel bearbeiten"></a>
             </div>
         </div>
     </div>
